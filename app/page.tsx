@@ -1,65 +1,144 @@
-import Image from "next/image";
+import Link from "next/link";
+import Pill from "@/components/ui/Pill";
+import Section from "@/components/ui/Section";
+
+const serviceHighlights = [
+  {
+    title: "Custom Web Apps & MVPs",
+    description:
+      "Designing and building full-stack web apps and MVPs you can demo to users or investors.",
+  },
+  {
+    title: "Dashboards & Internal Tools",
+    description:
+      "Job boards, CRMs, analytics dashboards, and ops tools — the same kind I use to run my own work.",
+  },
+  {
+    title: "Launchframe Templates & Dev Kits",
+    description:
+      "Pre-built starters for freelancers and founders: dashboards, client portals, and more.",
+  },
+];
+
+const whyItems = [
+  "AI-powered development (Cursor, GPT, Claude) for faster delivery.",
+  "Real architecture under the hood – not copy/paste scripts.",
+  "Clear scope, clean communication, and practical features.",
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="space-y-16 pb-6">
+      <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="space-y-6">
+          <Pill>Rob Short · Launchframe</Pill>
+          <div className="space-y-4">
+            <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
+              I build custom web apps, dashboards & MVPs with AI-speed
+              execution.
+            </h1>
+            <p className="text-lg text-slate-300">
+              I’m Rob. I use Next.js, TypeScript, Tailwind and AI dev tools
+              (Cursor, GPT, Claude) to turn ideas and messy spreadsheets into
+              real products.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="https://www.fiverr.com/s/xXxd84Q"
+              className="inline-flex items-center justify-center rounded-lg bg-emerald-400 px-5 py-3 text-slate-900 font-semibold shadow-lg shadow-emerald-500/30 transition hover:scale-[1.01] hover:bg-emerald-300"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Hire me to build your app
+            </Link>
+            <Link
+              href="/projects"
+              className="inline-flex items-center justify-center rounded-lg border border-white/10 px-5 py-3 font-semibold text-emerald-200 transition hover:border-emerald-400/60 hover:text-emerald-200/90"
             >
-              Learning
-            </a>{" "}
-            center.
+              See what I’ve built
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-2 text-sm text-slate-400">
+            <Pill className="text-sm">MVPs</Pill>
+            <Pill className="text-sm">Dashboards</Pill>
+            <Pill className="text-sm">Internal tools</Pill>
+            <Pill className="text-sm">AI-assisted delivery</Pill>
+          </div>
+        </div>
+
+        <div className="lf-card space-y-4 p-6 sm:p-8">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 rounded-xl bg-emerald-400/20 ring-1 ring-emerald-400/40" />
+            <div>
+              <p className="text-sm text-emerald-200">Launchframe approach</p>
+              <p className="text-lg font-semibold text-white">
+                Speed with real architecture
+              </p>
+            </div>
+          </div>
+          <p className="text-slate-300">
+            I pair product thinking with AI-accelerated build cycles, so you get
+            clean, shippable code fast — not a pile of scripts.
           </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="rounded-lg border border-white/5 bg-white/5 px-4 py-3">
+              <p className="text-sm text-slate-400">Stack</p>
+              <p className="font-semibold text-white">
+                Next.js · TypeScript · Tailwind
+              </p>
+            </div>
+            <div className="rounded-lg border border-white/5 bg-white/5 px-4 py-3">
+              <p className="text-sm text-slate-400">Tools</p>
+              <p className="font-semibold text-white">Cursor · GPT · Claude</p>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <Section
+        title="What I do"
+        subtitle="Modern web products, delivered quickly with AI-assisted workflows."
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          {serviceHighlights.map((item) => (
+            <div key={item.title} className="lf-card h-full p-5">
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+              <p className="mt-3 text-sm text-slate-300">{item.description}</p>
+            </div>
+          ))}
         </div>
-      </main>
+      </Section>
+
+      <Section title="Live Demo Highlight">
+        <div className="lf-card flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-2">
+            <h3 className="text-xl font-semibold text-white">
+              Empire Ops – My Personal Ops Dashboard
+            </h3>
+            <p className="text-sm text-slate-300">
+              The internal system I use to manage jobs, income, deadlines, and
+              channels. It keeps my freelance work organized and predictable.
+            </p>
+          </div>
+          <Link
+            href="https://job-dashboard-qph7-e8hohyxky-robert-shorts-projects.vercel.app/"
+            className="inline-flex h-10 items-center justify-center rounded-lg border border-emerald-400/70 px-4 font-semibold text-emerald-200 transition hover:bg-emerald-400/10"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View the live demo
+          </Link>
+        </div>
+      </Section>
+
+      <Section title="Why work with me">
+        <ul className="grid gap-3 sm:grid-cols-3 sm:gap-4">
+          {whyItems.map((item) => (
+            <li key={item} className="lf-card h-full p-4 text-sm text-slate-200">
+              {item}
+            </li>
+          ))}
+        </ul>
+      </Section>
     </div>
   );
 }
