@@ -25,10 +25,10 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
             <Image
               src="/launchframe-logo.png?v=3"
               alt="Launchframe logo"
-              width={200}
-              height={64}
+              width={260}
+              height={90}
               priority
-              className="h-12 w-auto sm:h-14"
+              className="h-16 w-auto sm:h-20"
             />
           </Link>
           <nav className="flex flex-wrap items-center gap-1 text-xs sm:gap-2 sm:text-sm">
