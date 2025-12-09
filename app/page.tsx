@@ -172,29 +172,6 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="Live demo highlight">
-        <div className="lf-card flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold text-white">
-              Empire Ops – Freelancer Ops Dashboard
-            </h3>
-            <p className="text-sm text-slate-300">
-              My own ops dashboard: jobs, deadlines, income, channels, and tax
-              buckets in one place. Built with the same stack I use for client
-              work.
-            </p>
-          </div>
-          <Link
-            href={siteConfig.links.empireOpsDemo}
-            className="inline-flex h-10 items-center justify-center rounded-lg border border-emerald-400/70 px-4 font-semibold text-emerald-200 transition hover:bg-emerald-400/10"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View the live demo
-          </Link>
-        </div>
-      </Section>
-
       <Section title="How we go from idea to shipped">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((step, index) => (
