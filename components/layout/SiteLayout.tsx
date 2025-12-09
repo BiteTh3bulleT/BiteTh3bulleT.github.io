@@ -22,17 +22,14 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
             className="flex items-center gap-3 text-sm font-semibold uppercase tracking-tight text-emerald-300"
             aria-label="Launchframe home"
           >
-            <span className="relative h-10 w-10 overflow-hidden rounded-xl ring-1 ring-emerald-400/40">
-              <Image
-                src="/launchframe-logo.svg"
-                alt="Launchframe logo"
-                fill
-                className="object-contain"
-                priority
-              />
-            </span>
-            <span className="hidden sm:inline text-emerald-100">Launchframe</span>
-            <span className="sm:hidden text-emerald-100">LF</span>
+            <Image
+              src="/launchframe-logo.svg"
+              alt="Launchframe logo"
+              width={150}
+              height={48}
+              priority
+              className="h-10 w-auto sm:h-12"
+            />
           </Link>
           <nav className="flex flex-wrap items-center gap-1 text-xs sm:gap-2 sm:text-sm">
             {navLinks.map((link) => (
