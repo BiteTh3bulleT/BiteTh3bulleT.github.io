@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "Launchframe | Custom web apps, dashboards & MVPs",
   description:
     "Launchframe builds custom web apps, dashboards, and MVPs using Next.js, TypeScript, Tailwind, and AI dev tools like Cursor, GPT, and Claude.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

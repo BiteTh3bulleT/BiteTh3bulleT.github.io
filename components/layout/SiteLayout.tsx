@@ -18,11 +18,14 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <Link
             href="/"
-            className="flex items-center gap-2 text-sm font-semibold uppercase tracking-tight text-emerald-300"
+            className="flex items-center gap-3 text-sm font-semibold uppercase tracking-tight text-emerald-300"
             aria-label="Launchframe home"
           >
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-400/15 text-xs font-black text-emerald-200 ring-1 ring-emerald-400/40">
+              LF
+            </span>
             <span className="hidden sm:inline">Launchframe</span>
-            <span className="sm:hidden">Launchframe</span>
+            <span className="sm:hidden">LF</span>
           </Link>
           <nav className="flex flex-wrap items-center gap-1 text-xs sm:gap-2 sm:text-sm">
             {navLinks.map((link) => (
