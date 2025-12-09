@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "Launchframe builds custom web apps, dashboards, and MVPs using Next.js, TypeScript, Tailwind, and AI dev tools like Cursor, GPT, and Claude.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/launchframe-favicon.ico",
   },
 };
 

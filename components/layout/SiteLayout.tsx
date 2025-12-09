@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -21,11 +22,17 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
             className="flex items-center gap-3 text-sm font-semibold uppercase tracking-tight text-emerald-300"
             aria-label="Launchframe home"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-400/15 text-xs font-black text-emerald-200 ring-1 ring-emerald-400/40">
-              LF
+            <span className="relative h-10 w-10 overflow-hidden rounded-xl ring-1 ring-emerald-400/40">
+              <Image
+                src="/launchframe-logo.svg"
+                alt="Launchframe logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </span>
-            <span className="hidden sm:inline">Launchframe</span>
-            <span className="sm:hidden">LF</span>
+            <span className="hidden sm:inline text-emerald-100">Launchframe</span>
+            <span className="sm:hidden text-emerald-100">LF</span>
           </Link>
           <nav className="flex flex-wrap items-center gap-1 text-xs sm:gap-2 sm:text-sm">
             {navLinks.map((link) => (
