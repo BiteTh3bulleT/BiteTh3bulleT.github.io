@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Pill from "@/components/ui/Pill";
 import Section from "@/components/ui/Section";
 import { siteConfig } from "@/siteConfig";
 
@@ -74,7 +73,6 @@ export default function Home() {
     <div className="space-y-16 pb-6">
       <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-6">
-          <Pill>Launchframe</Pill>
           <div className="space-y-4">
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
               Custom web apps, dashboards &amp; MVPs — built fast with
@@ -107,12 +105,6 @@ export default function Home() {
           <p className="text-sm text-slate-400">
             Live example of the kind of internal tools and dashboards I build.
           </p>
-          <div className="flex flex-wrap gap-2 text-sm text-slate-400">
-            <Pill className="text-sm">MVPs</Pill>
-            <Pill className="text-sm">Dashboards</Pill>
-            <Pill className="text-sm">Internal tools</Pill>
-            <Pill className="text-sm">AI-assisted delivery</Pill>
-          </div>
         </div>
 
         <div className="lf-card space-y-4 p-6 sm:p-8">
