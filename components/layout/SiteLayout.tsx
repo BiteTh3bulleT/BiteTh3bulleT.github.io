@@ -23,7 +23,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
             aria-label="Launchframe home"
           >
             <Image
-              src="/launchframe-logo.svg?v=2"
+              src="/launchframe-logo.png?v=3"
               alt="Launchframe logo"
               width={150}
               height={48}
