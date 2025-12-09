@@ -1,111 +1,100 @@
 import Link from "next/link";
 import Section from "@/components/ui/Section";
+import { siteConfig } from "@/siteConfig";
 
 const tiers = [
   {
-    name: "Tier 1 – Small Internal Tool",
-    summary: "1–2 screens to replace a spreadsheet or simple intake workflow.",
-    priceHint: "Typically starts around $400.",
-    bullets: [
-      "Great for a quick dashboard, intake form + table, or single-view report.",
-      "Clean UI with the exact fields and filters you actually use.",
-      "Built to hand off: clear structure and easy edits.",
+    name: "Small Internal Tool",
+    summary: "1–2 screens. Replace a spreadsheet or manual process with a focused internal tool.",
+    includes: [
+      "1–2 core screens (e.g. table + detail view)",
+      "Basic filtering/search",
+      "Simple forms to create/update records",
+      "Responsive layout",
     ],
+    bestFor:
+      "Freelancers, solo operators, small teams who want to kill one specific pain point.",
+    priceHint: "Typically starts around $400–$500.",
   },
   {
-    name: "Tier 2 – Small App / CRM",
-    summary: "3–5 screens with CRUD, lists, and filters.",
-    priceHint: "Best for small teams or solo founders.",
-    bullets: [
-      "Simple CRM, client portal, or project tracker with real data flows.",
-      "Search, filter, and sort so you can actually find things.",
-      "Opinionated architecture ready to grow if you need it.",
+    name: "Small App / CRM",
+    summary: "3–5 screens. A small but complete app with lists, details, and basic workflows.",
+    includes: [
+      "3–5 screens (dashboard, list views, detail views)",
+      "Simple role or user types if needed",
+      "Basic authentication (login / signup)",
+      "Optional admin views for managing data",
     ],
+    bestFor: "Small teams, agencies, or founders who need a “real app” for their day-to-day.",
+    priceHint: "Often lands in the mid-range, depending on complexity.",
   },
   {
-    name: "Tier 3 – MVP Web App",
-    summary: "Up to ~8 screens with basic auth and multiple workflows.",
-    priceHint: "Includes a short planning session to define scope.",
-    bullets: [
-      "Early-stage SaaS MVP to show users or investors quickly.",
-      "Multi-step workflows, checklists, and simple automation hooks.",
-      "Clear milestones and demo-ready builds each week.",
+    name: "MVP Web App",
+    summary: "A lean but real MVP you can ship to early users or demo to investors.",
+    includes: [
+      "Up to ~8 screens",
+      "Auth + basic role logic",
+      "Multiple flows (e.g. onboarding, main workflow, reporting)",
+      "Clean UI styled like a modern SaaS",
     ],
-  },
-];
-
-const process = [
-  {
-    title: "Discovery",
-    detail: "You tell me the problem in normal language.",
-  },
-  {
-    title: "Scoping",
-    detail: "I map it to screens, flows, and a fixed price.",
-  },
-  {
-    title: "Build",
-    detail: "Implemented with Next.js + AI dev tools for speed.",
-  },
-  {
-    title: "Handoff",
-    detail: "You get the code, docs, and a support window.",
+    bestFor: "Founders validating a product idea or teams replacing a legacy tool.",
+    priceHint:
+      "Priced based on scope. We’ll define the feature set together before we start.",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <div className="space-y-14">
-      <Section title="Services" subtitle="Pick the level that fits your idea and budget.">
+      <Section
+        title="Services"
+        subtitle="Pick the level that matches your idea, timeline and budget. We can always customize from here."
+      >
         <div className="grid gap-6 md:grid-cols-3">
           {tiers.map((tier) => (
-            <div key={tier.name} className="lf-card h-full p-6 space-y-4">
-              <div className="space-y-1">
+            <div key={tier.name} className="lf-card h-full space-y-4 p-6">
+              <div className="space-y-2">
                 <h2 className="text-xl font-semibold text-white">{tier.name}</h2>
                 <p className="text-sm text-slate-300">{tier.summary}</p>
               </div>
-              <p className="text-sm font-semibold text-emerald-200">{tier.priceHint}</p>
-              <ul className="space-y-2 text-sm text-slate-300">
-                {tier.bullets.map((bullet) => (
-                  <li key={bullet} className="flex gap-2">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-emerald-400" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section title="Process">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {process.map((step, index) => (
-            <div key={step.title} className="lf-card h-full space-y-2 p-5">
-              <div className="flex items-center gap-2 text-sm font-semibold text-emerald-200">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-200">
-                  {index + 1}
-                </span>
-                {step.title}
+              <div className="space-y-2 rounded-lg border border-white/5 bg-white/5 p-4">
+                <p className="text-xs uppercase tracking-wide text-emerald-200">
+                  What’s included
+                </p>
+                <ul className="space-y-2 text-sm text-slate-300">
+                  {tier.includes.map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <span className="mt-1 h-2 w-2 rounded-full bg-emerald-400" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <p className="text-sm text-slate-300">{step.detail}</p>
+              <div className="space-y-1 text-sm">
+                <p className="font-semibold text-white">Best for</p>
+                <p className="text-slate-300">{tier.bestFor}</p>
+              </div>
+              <p className="text-sm font-semibold text-emerald-200">{tier.priceHint}</p>
             </div>
           ))}
         </div>
       </Section>
 
-      <div className="lf-card flex flex-col items-start gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
-        <div className="space-y-1">
-          <h3 className="text-xl font-semibold text-white">Ready to scope your build?</h3>
+      <div className="lf-card space-y-4 p-6 sm:flex sm:items-center sm:justify-between sm:space-y-0">
+        <div className="space-y-2">
+          <h3 className="text-xl font-semibold text-white">Not sure which fits?</h3>
           <p className="text-sm text-slate-300">
-            Share your idea, must-haves, and timeline. I’ll reply with a clear plan.
+            Tell me what you’re trying to accomplish and I’ll recommend a path that makes
+            sense.
           </p>
         </div>
         <Link
-          href="/contact"
+          href={siteConfig.links.fiverr}
           className="inline-flex items-center justify-center rounded-lg bg-emerald-400 px-4 py-3 text-slate-900 font-semibold shadow-lg shadow-emerald-500/30 transition hover:scale-[1.01] hover:bg-emerald-300"
+          target="_blank"
+          rel="noreferrer"
         >
-          Message me about your project
+          Talk to me on Fiverr
         </Link>
       </div>
     </div>

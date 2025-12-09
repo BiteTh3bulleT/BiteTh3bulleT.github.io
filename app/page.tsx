@@ -1,29 +1,72 @@
 import Link from "next/link";
 import Pill from "@/components/ui/Pill";
 import Section from "@/components/ui/Section";
+import { siteConfig } from "@/siteConfig";
 
-const serviceHighlights = [
+const whoIBuildFor = [
+  {
+    title: "Solo founders",
+    description:
+      "You have an idea, a rough spec, or even just a Notion doc — you need an MVP you can show to users, investors or early customers.",
+  },
+  {
+    title: "Small teams & agencies",
+    description:
+      "You’re drowning in spreadsheets, manual processes and half-working tools. You need dashboards, CRMs or internal tools that actually match your workflow.",
+  },
+  {
+    title: "Freelancers & creators",
+    description:
+      "You want systems: job tracking, deadlines, income visibility and client portals. The stuff that keeps your business organized without feeling like a second job.",
+  },
+];
+
+const whatIBuild = [
   {
     title: "Custom Web Apps & MVPs",
     description:
-      "Designing and building full-stack web apps and MVPs you can demo to users or investors.",
+      "New product ideas, early-stage SaaS, or “I wish there was an app for this” tools. Authentication, basic role logic, and clean UIs that feel like a real product — not a prototype.",
   },
   {
     title: "Dashboards & Internal Tools",
     description:
-      "Job boards, CRMs, analytics dashboards, and ops tools — the same kind I use to run my own work.",
+      "Job boards, CRMs, admin tools, project trackers, analytics views. The boring-but-critical tools that quietly run your day-to-day.",
   },
   {
     title: "Launchframe Templates & Dev Kits",
     description:
-      "Pre-built starters for freelancers and founders: dashboards, client portals, and more.",
+      "Prebuilt starting points for freelancers and founders: ops dashboards, client portals, small CRMs and starter kits you can customize or extend.",
   },
 ];
 
-const whyItems = [
-  "AI-powered development (Cursor, GPT, Claude) for faster delivery.",
-  "Real architecture under the hood – not copy/paste scripts.",
-  "Clear scope, clean communication, and practical features.",
+const processSteps = [
+  {
+    title: "Listen",
+    detail:
+      "You tell me what hurts: what’s slow, messy or blocking you. No need for technical language — just describe the process.",
+  },
+  {
+    title: "Shape",
+    detail:
+      "I translate your ideas into screens, flows and data models. We agree on scope so you know exactly what you’re getting.",
+  },
+  {
+    title: "Build",
+    detail:
+      "I use Next.js + AI dev tools (Cursor, GPT, Claude) to build fast without losing structure. Every feature still goes through my eyes and hands.",
+  },
+  {
+    title: "Deliver",
+    detail:
+      "You get a working app, source code, and run/deploy instructions. If you want, I can also help put it on Vercel, Render or your chosen host.",
+  },
+];
+
+const expectations = [
+  "Straightforward communication, no buzzword soup.",
+  "Clear scope before we start.",
+  "Practical features that match your workflow.",
+  "Room to grow — the codebase won’t fight you later.",
 ];
 
 export default function Home() {
@@ -34,28 +77,36 @@ export default function Home() {
           <Pill>Launchframe</Pill>
           <div className="space-y-4">
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
-              I build custom web apps, dashboards & MVPs with AI-speed
-              execution.
+              Custom web apps, dashboards &amp; MVPs — built fast with
+              AI-powered development.
             </h1>
             <p className="text-lg text-slate-300">
-              I use Next.js, TypeScript, Tailwind and AI dev tools (Cursor, GPT,
-              Claude) to turn ideas and messy spreadsheets into real products.
+              I’m Rob. I use Next.js, TypeScript, Tailwind and AI dev tools
+              (Cursor, GPT, Claude) to turn vague ideas, messy spreadsheets and
+              half-finished tools into real products.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
             <Link
-              href="https://www.fiverr.com/s/xXxd84Q"
+              href={siteConfig.links.fiverr}
               className="inline-flex items-center justify-center rounded-lg bg-emerald-400 px-5 py-3 text-slate-900 font-semibold shadow-lg shadow-emerald-500/30 transition hover:scale-[1.01] hover:bg-emerald-300"
+              target="_blank"
+              rel="noreferrer"
             >
-              Hire me to build your app
+              Hire me on Fiverr
             </Link>
             <Link
-              href="/projects"
+              href={siteConfig.links.empireOpsDemo}
               className="inline-flex items-center justify-center rounded-lg border border-white/10 px-5 py-3 font-semibold text-emerald-200 transition hover:border-emerald-400/60 hover:text-emerald-200/90"
+              target="_blank"
+              rel="noreferrer"
             >
-              See what I’ve built
+              View Empire Ops demo
             </Link>
           </div>
+          <p className="text-sm text-slate-400">
+            Live example of the kind of internal tools and dashboards I build.
+          </p>
           <div className="flex flex-wrap gap-2 text-sm text-slate-400">
             <Pill className="text-sm">MVPs</Pill>
             <Pill className="text-sm">Dashboards</Pill>
@@ -94,32 +145,47 @@ export default function Home() {
       </section>
 
       <Section
-        title="What I do"
-        subtitle="Modern web products, delivered quickly with AI-assisted workflows."
+        title="Who I build for"
+        subtitle="If you know the problem but don’t want to wrestle the code, you’re in the right place."
       >
         <div className="grid gap-4 md:grid-cols-3">
-          {serviceHighlights.map((item) => (
-            <div key={item.title} className="lf-card h-full p-5">
+          {whoIBuildFor.map((item) => (
+            <div key={item.title} className="lf-card h-full p-5 space-y-3">
               <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-sm text-slate-300">{item.description}</p>
+              <p className="text-sm text-slate-300">{item.description}</p>
             </div>
           ))}
         </div>
       </Section>
 
-      <Section title="Live Demo Highlight">
+      <Section
+        title="What I build"
+        subtitle="Modern web products and internal tools that feel finished, not like prototypes."
+      >
+        <div className="grid gap-4 md:grid-cols-3">
+          {whatIBuild.map((item) => (
+            <div key={item.title} className="lf-card h-full p-5 space-y-3">
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+              <p className="text-sm text-slate-300">{item.description}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section title="Live demo highlight">
         <div className="lf-card flex flex-col gap-4 p-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-2">
             <h3 className="text-xl font-semibold text-white">
-              Empire Ops – My Personal Ops Dashboard
+              Empire Ops – Freelancer Ops Dashboard
             </h3>
             <p className="text-sm text-slate-300">
-              The internal system I use to manage jobs, income, deadlines, and
-              channels. It keeps my freelance work organized and predictable.
+              My own ops dashboard: jobs, deadlines, income, channels, and tax
+              buckets in one place. Built with the same stack I use for client
+              work.
             </p>
           </div>
           <Link
-            href="https://job-dashboard-qph7-e8hohyxky-robert-shorts-projects.vercel.app/"
+            href={siteConfig.links.empireOpsDemo}
             className="inline-flex h-10 items-center justify-center rounded-lg border border-emerald-400/70 px-4 font-semibold text-emerald-200 transition hover:bg-emerald-400/10"
             target="_blank"
             rel="noreferrer"
@@ -129,9 +195,25 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section title="Why work with me">
-        <ul className="grid gap-3 sm:grid-cols-3 sm:gap-4">
-          {whyItems.map((item) => (
+      <Section title="How we go from idea to shipped">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {processSteps.map((step, index) => (
+            <div key={step.title} className="lf-card h-full space-y-3 p-5">
+              <div className="flex items-center gap-2 text-sm font-semibold text-emerald-200">
+                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-emerald-400/15 text-emerald-200">
+                  {index + 1}
+                </span>
+                {step.title}
+              </div>
+              <p className="text-sm text-slate-300">{step.detail}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section title="What you can expect">
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {expectations.map((item) => (
             <li key={item} className="lf-card h-full p-4 text-sm text-slate-200">
               {item}
             </li>
