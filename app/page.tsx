@@ -31,16 +31,15 @@ export default function Home() {
     <div className="space-y-16 pb-6">
       <section className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
         <div className="space-y-6">
-          <Pill>Rob Short · Launchframe</Pill>
+          <Pill>Launchframe</Pill>
           <div className="space-y-4">
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
               I build custom web apps, dashboards & MVPs with AI-speed
               execution.
             </h1>
             <p className="text-lg text-slate-300">
-              I’m Rob. I use Next.js, TypeScript, Tailwind and AI dev tools
-              (Cursor, GPT, Claude) to turn ideas and messy spreadsheets into
-              real products.
+              I use Next.js, TypeScript, Tailwind and AI dev tools (Cursor, GPT,
+              Claude) to turn ideas and messy spreadsheets into real products.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">

@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rob Short · Launchframe | Custom web apps, dashboards & MVPs",
+  title: "Launchframe | Custom web apps, dashboards & MVPs",
   description:
-    "Rob Short builds custom web apps, dashboards, and MVPs using Next.js, TypeScript, Tailwind, and AI dev tools like Cursor, GPT, and Claude.",
+    "Launchframe builds custom web apps, dashboards, and MVPs using Next.js, TypeScript, Tailwind, and AI dev tools like Cursor, GPT, and Claude.",
 };
 
 export default function RootLayout({
