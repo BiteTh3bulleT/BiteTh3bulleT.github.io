@@ -34,8 +34,8 @@ const projects: Project[] = [
     ],
     ctas: [
       {
-        label: "View live demo",
-        href: siteConfig.links.empireOpsDemo,
+        label: "View demo dashboard",
+        href: siteConfig.links.demoDashboard,
         external: true,
       },
       {

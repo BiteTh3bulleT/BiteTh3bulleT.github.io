@@ -5,7 +5,8 @@ export const siteConfig = {
   },
   links: {
     fiverr: "https://www.fiverr.com/s/xXxd84Q",
-    empireOpsDemo: "https://job-dashboard-qph7.vercel.app/",
+    empireOpsDemo: "https://job-dashboard-qph7.vercel.app/demo",
+    demoDashboard: "https://job-dashboard-qph7.vercel.app/demo",
     dashboard: "https://job-dashboard-qph7.vercel.app/auth",
   },
   contact: {

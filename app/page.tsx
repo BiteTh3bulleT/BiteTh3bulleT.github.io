@@ -94,12 +94,12 @@ export default function Home() {
               Hire me on Fiverr
             </Link>
             <Link
-              href={siteConfig.links.empireOpsDemo}
+              href={siteConfig.links.demoDashboard}
               className="inline-flex items-center justify-center rounded-lg border border-white/10 px-5 py-3 font-semibold text-emerald-200 transition hover:border-emerald-400/60 hover:text-emerald-200/90"
               target="_blank"
               rel="noreferrer"
             >
-              View Empire Ops demo
+              View Launchframe demo dashboard
             </Link>
           </div>
           <p className="text-sm text-slate-400">
