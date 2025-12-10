@@ -19,9 +19,11 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/70 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
           <Link
-            href="/"
+            href={siteConfig.links.dashboard}
+            target="_blank"
+            rel="noreferrer"
             className="flex items-center gap-3 text-sm font-semibold uppercase tracking-tight text-emerald-300"
-            aria-label="Launchframe home"
+            aria-label="Launchframe"
           >
             <Image
               src="/launchframe-logo.png?v=3"
