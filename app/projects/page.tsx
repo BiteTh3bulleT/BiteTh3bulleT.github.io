@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Pill from "@/components/ui/Pill";
 import Section from "@/components/ui/Section";
-import { siteConfig } from "@/siteConfig";
 
 type ProjectCta = {
   label: string;
@@ -33,11 +32,6 @@ const projects: Project[] = [
       "Channel view for Fiverr, Upwork, direct clients and more.",
     ],
     ctas: [
-      {
-        label: "View demo dashboard",
-        href: siteConfig.links.demoDashboard,
-        external: true,
-      },
       {
         label: "Get something like this built",
         href: "/services",
