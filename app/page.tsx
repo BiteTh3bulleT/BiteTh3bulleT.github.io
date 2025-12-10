@@ -94,14 +94,6 @@ export default function Home() {
               Hire me on Fiverr
             </Link>
             <Link
-              href={siteConfig.links.dashboard}
-              className="inline-flex items-center justify-center rounded-lg border border-emerald-400/70 px-5 py-3 font-semibold text-emerald-200 transition hover:border-emerald-400 hover:bg-emerald-400/10 hover:text-emerald-100"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open Job Dashboard
-            </Link>
-            <Link
               href={siteConfig.links.empireOpsDemo}
               className="inline-flex items-center justify-center rounded-lg border border-white/10 px-5 py-3 font-semibold text-emerald-200 transition hover:border-emerald-400/60 hover:text-emerald-200/90"
               target="_blank"

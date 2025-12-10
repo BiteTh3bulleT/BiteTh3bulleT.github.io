@@ -32,6 +32,14 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
               className="h-48 w-auto flex-shrink-0 sm:h-64"
             />
           </Link>
+          <Link
+            href={siteConfig.links.dashboard}
+            target="_blank"
+            rel="noreferrer"
+            className="sr-only focus:not-sr-only focus:absolute focus:right-4 focus:top-4 focus:rounded-md focus:bg-emerald-400 focus:px-3 focus:py-2 focus:text-slate-900"
+          >
+            Open dashboard
+          </Link>
           <nav className="flex flex-wrap items-center gap-1 text-xs sm:gap-2 sm:text-sm">
             {navLinks.map((link) => (
               <Link
@@ -42,14 +50,6 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                 {link.label}
               </Link>
             ))}
-            <a
-              href={siteConfig.links.dashboard}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-md px-3 py-2 text-slate-200 transition hover:bg-white/5 hover:text-emerald-300"
-            >
-              Dashboard
-            </a>
           </nav>
         </div>
       </header>
