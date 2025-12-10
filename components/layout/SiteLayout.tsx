@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
+import { siteConfig } from "@/siteConfig";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -41,6 +42,14 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
                 {link.label}
               </Link>
             ))}
+            <a
+              href={siteConfig.links.dashboard}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-md px-3 py-2 text-slate-200 transition hover:bg-white/5 hover:text-emerald-300"
+            >
+              Dashboard
+            </a>
           </nav>
         </div>
       </header>
